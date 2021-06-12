@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+    background: url("../background.jpg");
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    position: relative;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 5vh;
+    font-family: Roboto, Arial;
+    color: white;
+    text-transform: uppercase;
+
+    margin-bottom: 5vh;
+}
+
+.kolone {
+    width: 45vw;
+    margin: 0 0.1vw;
+}
+
+.red, .resred {
+    width: 25vw;
+    height: 6vh;
+
+    background: #011f68;
+    border: 0.3vh solid white;
+    box-sizing: border-box;
+    border-radius: 0.5vh;
+
+    position: relative;
+    margin: 0.5vh 0;
+
+    transition: background 1s;
+}
+
+.red {
+    font-size: 2.5vh;
+    line-height: 5.4vh;
+    font-family: Roboto, Arial;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#Akol .red:nth-child(2) { left: 5vw; }
+#Akol .red:nth-child(3) { left: 10vw; }
+#Akol .red:nth-child(4) { left: 15vw; }
+#Akol .resred { left: 20vw; }
+
+#Bkol .red:nth-child(1) { left: 20vw; }
+#Bkol .red:nth-child(2) { left: 15vw; }
+#Bkol .red:nth-child(3) { left: 10vw; }
+#Bkol .red:nth-child(4) { left: 5vw; }
+
+#Ckol .red:nth-child(4) { left: 5vw; }
+#Ckol .red:nth-child(3) { left: 10vw; }
+#Ckol .red:nth-child(2) { left: 15vw; }
+#Ckol .resred { left: 20vw; }
+
+#Dkol .red:nth-child(2) { left: 5vw; }
+#Dkol .red:nth-child(3) { left: 10vw; }
+#Dkol .red:nth-child(4) { left: 15vw; }
+#Dkol .red:nth-child(5) { left: 20vw; }
+
+
+.resenje {
+    width: 45%;
+    margin: 0 10vw;
+    height: 6vh;
+
+    background: #011f68;
+    border: 0.3vh solid white;
+    box-sizing: border-box;
+
+    border-radius: 0.5vh;
+    transition: background 1s;
+}
+
+.resred input {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    font-family: Roboto, Arial;
+    color: white;
+    text-align: center;
+    font-size: 2.5vh;
+    text-transform: uppercase;
+}
+
+.resred input::placeholder{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.resenje input {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    font-family: Roboto, Arial;
+    color: white;
+    text-align: center;
+    font-size: 2.5vh;
+    text-transform: uppercase;
+}
+
+.resenje input::placeholder{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.timediv {
+    position: absolute;
+    top: 20vh;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#timer {
+    height: 19vh;
+    width: 0.8vw;
+
+    border: 0.1vw solid black;
+    background: black;
+}
+
+#pun {
+    width: 100%;
+
+    background: #ffcc4d;
+}
+
+#timenum {
+    width: 5.5vw;
+    height: 6vh;
+
+    background: black;
+    color: #ffcc4d;
+    border-radius: 1vh;
+
+    text-align: center;
+    line-height: 6vh;
+    font-size: 4vh;
+    font-family: Roboto, Arial;
+
+    margin-bottom: 1vh;
+}
+
+#poeni {
+    position: absolute;
+    top: 74vh;
+    
+    width: 6vw;
+    height: 6vh;
+
+    background: #011f68;
+    color: #4deaff;
+    border-radius: 1vh;
+
+    text-align: center;
+    line-height: 6vh;
+    font-size: 4vh;
+    font-family: Roboto, Arial;
+}
+
+#send {
+    position: absolute;
+    top: 54.2vh;
+    left: 72.5vw;
+
+    width: auto;
+    height: 6vh;
+    padding: 0 2vh;
+    margin: 0 2vh;
+
+    text-align: center;
+    line-height: 6vh;
+    font-size: 3vh;
+    font-family: Roboto, Arial;
+    color: white;
+    
+    border: 0;
+    outline: 0;
+    border-radius: 1vh;
+
+    background: #003a61;
+    
+    cursor: pointer;
+}

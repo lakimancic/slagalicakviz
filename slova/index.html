@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Slagalica - Slova</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <h1 id="leva">СЛАГАЛИЦА</h1>
+            <h1 id="desna">НАЈДУЖА РЕЧ</h1>
+            <div id="poeni">0</div>
+            <div id="timer">
+                <div id="pun"></div>
+            </div>
+            <div id="timenum"></div>
+        </div>
+        <div class="bottom">
+            <div class="slova">
+                <div class="slovo"></div>
+                <div class="slovo"></div>
+                <div class="slovo"></div>
+                <div class="slovo"></div>
+                <div class="slovo"></div>
+                <div class="slovo"></div>
+                <div class="slovo"></div>
+                <div class="slovo"></div>
+                <div class="slovo"></div>
+                <div class="slovo"></div>
+                <div class="slovo"></div>
+                <div class="slovo"></div>
+            </div>
+            <div class="moja rec"><i class="fas fa-check-circle" id="correct"></i><i class="fas fa-times-circle" id="incorrect"></i><p id="mojarec"></p><i class="fas fa-backspace" id="del"></i></div>
+            <div class="resenje rec"></div>
+            <div class="btns">
+                <button id="stop">СТОП</button>
+                <button id="send">ПОТВРДИ</button>
+                <button id="check">ПРОВЕРИ РЕЧ</button>
+                <button id="nextgame">СЛЕДЕЋА ИГРА</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

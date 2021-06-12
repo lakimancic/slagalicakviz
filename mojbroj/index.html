@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Slagalica - Moj broj</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <h1 id="leva">СЛАГАЛИЦА</h1>
+            <h1 id="desna">МОЈ БРОЈ</h1>
+            <div id="poeni">0</div>
+            <div id="timer">
+                <div id="pun"></div>
+            </div>
+            <div id="timenum"></div>
+        </div>
+        <div class="bottom">
+            <div class="trazen">
+                <div class="br0 br"></div>
+                <div class="br1 br"></div>
+                <div class="br2 br"></div>
+            </div>
+            <div class="brojevi">
+                <div class="br3 br"></div>
+                <div class="br4 br"></div>
+                <div class="br5 br"></div>
+                <div class="br6 br"></div>
+                <div class="br7 br"></div>
+                <div class="br8 br"></div>
+            </div>
+            <div class="operacije">
+                <div>+</div>
+                <div>-</div>
+                <div>*</div>
+                <div>/</div>
+                <div>(</div>
+                <div>)</div>
+            </div>
+            <div id="mojizraz" class="izraz">
+                <p></p><i class="fas fa-backspace" id="del"></i>
+            </div>
+            <div id="resenje" class="izraz"></div>
+            <div class="btns">
+                <button id="stop">СТОП</button>
+                <button id="send">ПОТВРДИ</button>
+                <button id="nextgame">СЛЕДЕЋА ИГРА</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

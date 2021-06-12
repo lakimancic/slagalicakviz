@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+
+            background: url("background.jpg");
+            background-size: cover;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        table {
+            width: 50%;
+            height: 60vh;
+
+            color: white;
+            font-size: 3vh;
+            font-family: Roboto, Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        td {
+            border: 0.3vh solid white;
+            background-color: #011f68;
+        }
+
+        h1 {
+            margin: 3vh 0;
+            color: white;
+            font-size: 5vh;
+            font-family: Roboto, Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            width: auto;
+            height: 8vh;
+            padding: 0 2vh;
+            margin: 2vh 2vh;
+
+            text-align: center;
+            line-height: 8vh;
+            font-size: 4vh;
+            font-family: Roboto, Arial;
+            color: white;
+            
+            border: 0;
+            outline: 0;
+            border-radius: 1vh;
+
+            background: #003a61;
+            
+            cursor: pointer;
+        }
+    </style>
+    <title>Slagalica - Kraj</title>
+</head>
+<body>
+    <div class="container">
+        <h1>СЛАГАЛИЦА - РЕЗУЛТАТ</h1>
+        <table>
+            <tr id="reci">
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="broj">
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="kpk">
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="skocko">
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="spoj">
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="kzz">
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="asoc">
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="ukup">
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <button id="kraj">ПОЧЕТНА СТРАНА</button>
+    </div>
+    <script>
+        $(document).ready(function() {
+            let igre = ["reci","broj","kpk","skocko","spoj","kzz","asoc","ukup"];
+            let nazivIgre = {
+                "reci": "СЛАГАЛИЦА",
+                "broj": "МОЈ БРОЈ",
+                "kpk":"КОРАК ПО КОРАК",
+                "skocko":"СКОЧКО",
+                "spoj":"СПОЈНИЦЕ",
+                "kzz":"КО ЗНА ЗНА",
+                "asoc":"АСОЦИЈАЦИЈЕ",
+                "ukup":"УКУПНО"
+            }
+            let game = sessionStorage['game'];
+            let gameInfo;
+            if(game == 8){
+                gameInfo = JSON.parse(sessionStorage['gameInfo']);
+                //console.log(gameInfo)
+                igre.forEach(item => {
+                    $("#" + item).children("td:eq(0)").text(nazivIgre[item]);
+                    $("#" + item).children("td:eq(1)").text(gameInfo[item]);
+                });
+
+                $("#kraj").click(() => {
+                    if(localStorage["myresults"]){
+                        let arr = JSON.parse(localStorage["myresults"]);
+                        let obj = {
+                            datum: Date.now(),
+                            poeni: gameInfo.ukup
+                        }
+                        arr.push(obj);
+                        localStorage["myresults"] = JSON.stringify(arr);
+                    }else{
+                        let arr = [];
+                        let obj = {
+                            datum: Date.now(),
+                            poeni: gameInfo.ukup
+                        }
+                        arr.push(obj);
+                        localStorage["myresults"] = JSON.stringify(arr);
+                    }
+                    sessionStorage.removeItem("gameInfo");
+                    sessionStorage.removeItem("game");
+                    location.href = "index.html";
+                })
+            }
+            else{
+                location.href = "../index.html";
+            }
+
+        })
+    </script>
+</body>
+</html>
