@@ -80,7 +80,10 @@ $(document).ready(() => {
     $("#send").click(function() {
         if(ind < 6){
             curkob = curkob.split("");
-            for(let i=0;i<4;i++) if(curkob[i] == '0') return;
+            for(let i=0;i<4;i++) if(curkob[i] == '0') {
+                curkob = curkob.join("");
+                return;
+            }
             curkob = curkob.join("");
             let pom = curkob.split("");
             let pom2 = komb.split("");
